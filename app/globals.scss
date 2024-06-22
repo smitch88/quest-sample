@@ -1,0 +1,13 @@
+@import url("https://use.typekit.net/iev0rnf.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles/dynamic.scss";
+
+body {
+  font-family: "teko", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

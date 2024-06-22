@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id                  String           @id
+  username            String
+  credentials         Json?
+  email               String?
+  firstVisit          DateTime
+  lastVisit           DateTime?
+  referred            Referral[]       @relation("Referred")
+  referredBy          Referral?        @relation("ReferredBy")
+  xp                  Int              @default(0)
+  quests              Int              @default(0)
+  referralId          String           @unique
+  xProfile            XProfile?
+  discordProfile      DiscordProfile?
+  questTasks          UserQuestTask[]  @relation("UserQuests")
+  imageUrl            String?
+
+  @@index([referralId])
+  @@index([username])
+  @@index([email])
+}
+
+model XProfile {
+  id                    Int     @id @default(autoincrement())
+  xId                   String  @unique
+  userId                String  @unique
+  user                  User    @relation(fields: [userId], references: [id])
+  name                  String?
+  username              String?
+  description           String?
+  imageUrl              String? @db.VarChar(300)
+  metadata              Json?
+  visible               Boolean @default(true)
+
+  @@index([xId])
+  @@index([username])
+}
+
+model DiscordProfile {
+  id                    Int     @id @default(autoincrement())
+  discordId             String  @unique
+  userId                String  @unique
+  user                  User    @relation(fields: [userId], references: [id])
+  email                 String?
+  name                  String?
+  username              String?
+  description           String?
+  imageUrl              String? @db.VarChar(300)
+  metadata              Json?
+  visible               Boolean @default(true)
+
+  @@index([discordId])
+  @@index([userId])
+  @@index([username])
+}
+
+model Referral {
+  id           Int      @id @default(autoincrement())
+  referredById String?  @db.VarChar(300)
+  referredBy   User?    @relation("Referred", fields: [referredById], references: [id])
+  referralId   String?  @db.VarChar(300)
+  referred     User?    @relation("ReferredBy", fields: [referredId], references: [id])
+  referredId   String?  @unique @db.VarChar(300)
+  createdAt    DateTime @default(now())
+
+  @@index([referralId])
+  @@index([referredId])
+}
+
+model UserQuestTask {
+  userId         String
+  user           User       @relation("UserQuests", fields: [userId], references: [id])
+  questId        String
+  twitterId      String
+  reward         Int
+  createdAt      DateTime   @default(now())
+
+  @@id([userId, questId])
+}
+
+model AuditLog {
+  id          Int      @id @default(autoincrement())
+  createdAt   BigInt   @default(0)
+  event       String?  @db.VarChar(300)
+  name        String?  @db.VarChar(300)
+  description String?  @db.Text
+  context     Json?
+  userId      String?  @db.VarChar(300)
+
+  @@index([event])
+  @@index([name])
+}
