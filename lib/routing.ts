@@ -1,7 +1,7 @@
 export const navigationLinks = ({ isAuthenticated, user }) => {
   return [
     {
-      href: "/quests",
+      href: "/questing",
       enabled: true,
       label: "Questing",
     },
