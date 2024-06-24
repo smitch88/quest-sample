@@ -11,3 +11,19 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.icon-gradient {
+  fill: url(#gradient);
+}
+
+.text-gradient-daily {
+  background-image: linear-gradient(to bottom, #0082D9, #39E1FF);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-infinite {
+  background-image: linear-gradient(to bottom, #FF4400, #FF8B26);
+  -webkit-background-clip: text;
+  color: transparent;
+}

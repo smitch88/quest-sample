@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "20.5.4",
     "@types/react": "18.2.21",
@@ -31,9 +32,10 @@
     "@dynamic-labs/ethereum": "^2.2.4",
     "@dynamic-labs/sdk-react-core": "^2.2.4",
     "@iconify/react": "^5.0.1",
-    "@prisma/client": "^5.15.1",
+    "@prisma/client": "5.15.1",
     "@react-hookz/web": "^24.0.4",
     "@vercel/kv": "^1.0.1",
+    "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "jsonwebtoken": "^9.0.2",

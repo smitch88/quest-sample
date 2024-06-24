@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import "react-loading-skeleton/dist/skeleton.css";
 import Provider from "@/components/Provider";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // TODO
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html dir="ltr" lang="en" suppressHydrationWarning>
       <body className="w-full h-full font-main bg-background text-foreground">
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
               <Navbar />
               <div className="flex w-full h-full pt-[80px]">{children}</div>
             </div>
+            <Footer />
           </Provider>
         </Suspense>
       </body>

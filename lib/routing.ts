@@ -4,6 +4,7 @@ export const navigationLinks = ({ isAuthenticated, user }) => {
       href: "/questing",
       enabled: true,
       label: "Questing",
+      isNew: true,
     },
     {
       href: "/leaderboard",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LoginLayout({ children }) {
+export default function LoginLayout({ children: children }: { children: React.ReactNode }) {
   return (
     <html dir="ltr" lang="en" suppressHydrationWarning>
       <body className="w-full h-full font-main bg-background text-foreground">

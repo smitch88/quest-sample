@@ -1,0 +1,16 @@
+.card-with-hero-image .relative img {
+    width: 100%;
+    border: none;
+}
+  
+.card-with-hero-image .relative .absolute {
+    color: white;
+}
+  
+.filter.grayscale {
+    filter: grayscale(1);
+}
+  
+.image-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0 90%);
+}

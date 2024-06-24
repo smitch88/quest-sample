@@ -1,0 +1,21 @@
+/* styles.css */
+.text-gradient-daily {
+    background: linear-gradient(to bottom, #0082D9, #39E1FF);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gradient-infinite {
+    background: linear-gradient(to bottom, #FF4400, #FF8B26);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .svg-gradient {
+    fill: url(#gradient-daily);
+  }
+  
+  .svg-gradient-infinite {
+    fill: url(#gradient-infinite);
+  }
+  

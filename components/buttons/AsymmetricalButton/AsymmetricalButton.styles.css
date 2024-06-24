@@ -1,0 +1,16 @@
+.asymmetrical-type1 {
+  clip-path: polygon(8% 7%, 94% 0, 100% 100%, 0 95%);
+}
+
+.asymmetrical-type2 {
+  clip-path: polygon(0 0, 100% 6%, 93% 96%, 8% 100%);
+}
+
+.asymmetrical-type3 {
+  clip-path: polygon(6% 4%, 100% 0, 93% 100%, 0 95%);
+}
+
+.asymmetrical-type4 {
+  clip-path: polygon(0 0, 94% 3%, 100% 95%, 7% 100%);
+}
+  

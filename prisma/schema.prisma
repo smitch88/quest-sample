@@ -100,3 +100,31 @@ model AuditLog {
   @@index([event])
   @@index([name])
 }
+
+enum QuestStatus {
+  IN_PROGRESS
+  LOCKED 
+  EXPIRED
+  ACTIVE
+  COMPLETE
+}
+
+enum QuestFrequency {
+  DAILY
+  ONETIME
+  INFINITE
+}
+
+model Quest {
+  id          String      @id
+  name        String
+  description String
+  imageUrl    String
+  category    String
+  reward      Int
+  frequency   QuestFrequency
+  status      QuestStatus
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  expiresAt   DateTime
+}

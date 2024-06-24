@@ -1,0 +1,33 @@
+/* styles/AssymetricStatusTag.styles.css */
+.relative::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    clip-path: polygon(0 8%, 100% 0, 92% 100%, 4% 94%);
+    border-radius: inherit;
+    transform: translateY(-2px);
+}
+
+.bg-brand-frostbite::before {
+    background-color: #0082D9;
+}
+
+.bg-brand-blaze::before {
+    background-color: #FF8B26;
+}
+
+.bg-green-500::before {
+    background-color: #22C55E; /* Adjust to match your green color */
+}
+
+.bg-brand-inferno::before {
+    background-color: #FF4400;
+}
+
+.bg-neutral-500::before {
+    background-color: #737678;
+}
