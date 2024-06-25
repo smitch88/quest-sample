@@ -9,7 +9,7 @@ import OptigamesIcon from "@/public/images/logo-optigames.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#151A1E] text-background" style={{ height: '196px' }}>
+    <footer className="w-full bg-[#151A1E] text-background z-50" style={{ height: '196px' }}>
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center md:items-center justify-between px-2 md:px-6 h-full">
         <div className="flex items-center w-full md:w-auto justify-start md:justify-start mt-12 md:mt-0">
           <OptigamesIcon className="h-12 w-auto" alt="OptiGames logo" style={{ height: '42.9px', width: '210.38px' }} />

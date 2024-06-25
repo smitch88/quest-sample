@@ -14,6 +14,7 @@ export interface BaseButtonProps {
   customFontClass?: string;
   customStyles?: string;
   gradientStyle?: 'horizontal' | 'vertical';
+  customColor?: string;
   onClick?: () => void;
 }
 
@@ -30,6 +31,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   customStyles = '',
   gradientStyle = 'horizontal',
   onClick = () => {},
+  customColor = '',
 }) => {
   const baseClasses = 'font-header flex items-center justify-center text-white italic h-fit transition-opacity duration-20 hover:opacity-70';
   let variantClasses = '';
@@ -39,6 +41,9 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   switch (variant) {
     case 'primary':
       variantClasses = gradientStyle === 'horizontal' ? 'bg-gradient-h-fire' : 'bg-gradient-v-fire';
+      if (customColor) {
+        variantClasses = customColor;
+      }
       break;
     case 'secondary':
       variantClasses = 'bg-transparent border border-white';

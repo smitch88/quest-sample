@@ -59,7 +59,7 @@ const QuestBar = ({ imageSrc, currentXP = 70, level = 1, maxXP = 100 }) => {
       </div>
       <div className="absolute z-1 top-24 left-[647px] h-[72px] w-[225px] m-1">
           <StandardButton customStyles='rounded-none -skew-x-[45deg] h-full w-full' size='large'>
-            <span className='text-white font-bold skew-x-[45deg]'>Claim</span>
+            <span className='text-white font-bold skew-x-[45deg]'>Daily Draw</span>
           </StandardButton>
       </div>
     </div>

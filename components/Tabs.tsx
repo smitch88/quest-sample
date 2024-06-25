@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useEffect, useState } from 'react';
 import clsx from 'clsx';
 
@@ -28,7 +29,7 @@ const Tab: React.FC<TabProps> = ({ label, active, onClick }) => {
       <span ref={spanRef}>{label}</span>
       {active && (
         <div
-          className="absolute bottom-[-6px] h-2 bg-brand-frostbite"
+          className="absolute bottom-[-6px] h-2 bg-brand-frostbite pb-6"
           style={{ width: `${spanWidth}px`, bottom: '-18px'}}
         ></div>
       )}
@@ -38,11 +39,15 @@ const Tab: React.FC<TabProps> = ({ label, active, onClick }) => {
 
 interface TabsProps {
   tabs: { label: string }[];
-  onTabChange: (index: number) => void;
-  activeTab: number;
 }
 
-const Tabs: React.FC<TabsProps> = ({ tabs, onTabChange, activeTab }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs }) => {
+  const [activeTab, setActiveTab] = useState(0);
+  
+  const onTabChange = (index: number) => {
+    setActiveTab(index);
+  };
+
   return (
     <div className="flex space-x-4">
       {tabs.map((tab, index) => (

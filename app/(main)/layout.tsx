@@ -25,10 +25,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html dir="ltr" lang="en" suppressHydrationWarning>
-      <body className="w-full h-full font-main bg-background text-foreground">
+      {/* Stop horizontal scrolling  */}
+      <body className="w-full h-full font-main bg-background text-foreground overflow-x-hidden">
         <Suspense>
           <Provider>
-            <div className="flex min-h-[100dvh] min-w-screen">
+            <div className="flex min-h-[100dvh] min-w-screen background-image">
               <Navbar />
               <div className="flex w-full h-full pt-[80px]">{children}</div>
             </div>

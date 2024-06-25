@@ -8,7 +8,7 @@ interface AsymetricInputFieldProps extends InputFieldProps {
 const AsymetricInputField: React.FC<AsymetricInputFieldProps> = (props) => {
     const className = props.asymetricType === 'type1' ? 'asymmetrical-type1' : 'asymmetrical-type2';
     return (
-        <StandardInputField {...props} customStyles={`${className} rounded-none px-6`}/>
+        <StandardInputField {...props} customStyles={`${className} rounded-none px-6 border-none`}/>
     );
 }
 

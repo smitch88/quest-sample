@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 
 const StatusTag = ({ status }: { status: QuestStatus }) => {
-    const baseClasses = "relative inline-flex items-center justify-center py-0 px-2 text-white text-lg transform font-header bg-transparent mb-2"; // Set bg-transparent here
+    const baseClasses = "relative inline-flex items-center justify-center py-0 px-2 text-white text-base font-bold transform font-header bg-transparent mb-2"; // Set bg-transparent here
     const statusClasses: { [key: string]: string } = {
         [QuestStatus.ACTIVE]:  "before:bg-brand-frostbite",
         [QuestStatus.IN_PROGRESS]: "before:bg-brand-blaze",

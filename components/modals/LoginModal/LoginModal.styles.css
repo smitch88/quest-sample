@@ -1,0 +1,9 @@
+/* BaseModal.styles.css */
+.highlight-border {
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 10px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://svgur.com/i/17_p.svg");
+    border-style: solid;
+}

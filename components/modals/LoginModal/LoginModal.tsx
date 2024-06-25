@@ -1,4 +1,4 @@
-// components/LoginModal.tsx
+'use client'
 import React, { useState } from 'react';
 import Modal from '../BaseModal/BaseModal';
 import Image from 'next/image';
@@ -9,21 +9,19 @@ import DiscordIcon from '@/public/icons/discord.svg';
 import SparkballLogo from '@/public/images/logo-color.svg';
 import StandardInputField from '@/components/inputs/StandardInputField';
 import StandardButton from '@/components/buttons/StandardButton/StandardButton';
+import './LoginModal.styles.css';
 
-interface LoginModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
+
+const LoginModal = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} className='w-[360px] h-[600px]'>
-      <div className="flex flex-col items-center w-[264px] h-[462px] mx-auto my-auto space-y-6">
+    <div className={`flex items-center justify-center w-full h-full`}>
+      <div className="flex flex-col items-center w-[360px] h-[574px] p-8 m-6 mx-auto my-auto space-y-6 z-10 bg-white highlight-border">
         <SparkballLogo className="h-12 w-auto" alt="Sparkball logo" style={{ height: '42.9px', width: '210.38px' }} />
-        <p className="mb-4">
+        <p className="mb-4 text-black">
           Don't have an account? <a href="#" className="text-orange-500">Create one</a>
         </p>
         <div className="w-full mb-4 space-y-4">
@@ -66,7 +64,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         </div>
         <a href="#" className="text-gray-500 mt-6">Forgot password?</a>
       </div>
-    </Modal>
+    </div>
   );
 };
 

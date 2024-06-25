@@ -24,7 +24,7 @@ const BaseCard: React.FC<BaseCardProps> = ({ children, quest, type='default', cu
 
 
   return (
-    <div className={`shadow-lg p-4 m-2 ${customStyles} min-w-[320px] w-[320px] h-[360px] min-h-[360px] ${chipClasses}`}>
+    <div className={`shadow-lg m-2 ${customStyles} min-w-[320px] w-[320px] h-[360px] min-h-[360px] ${chipClasses}`}>
       {children}
     </div>
   );

@@ -17,7 +17,7 @@ const DetailCard: React.FC<CardWithoutHeroImageProps> = ({ quest, type }) => {
   const description = type === 'chipped' ? 'text-white' : 'text-gray-600';
   const opacity = quest.status === QuestStatus.EXPIRED || quest.status === QuestStatus.COMPLETE ? 'opacity-50' : '';
   return (
-    <BaseCard quest={quest} customStyles={`card-without-hero-image ${bg}`} type={type}>
+    <BaseCard quest={quest} customStyles={`card-without-hero-image p-4 ${bg}`} type={type}>
       <div className="p-4">
         <div className='flex justify-between mt-2'>
           <div>
@@ -31,7 +31,7 @@ const DetailCard: React.FC<CardWithoutHeroImageProps> = ({ quest, type }) => {
         <p className="text-sm text-neutral-500">{quest.category}</p>
         <p className={`text-3xl font-main font-medium ${text} ${opacity}`} >{quest.name}</p>
         <p className={`text-sm mb-2 ${description} ${opacity}`}>{quest.description}</p>
-        <AsymmetricalButton variant="primary" size="large" styleType='type2' customStyles='w-full'>CLAIM</AsymmetricalButton>
+        <AsymmetricalButton variant="primary" size="large" styleType='type2' customStyles='w-full' disabled={quest.status === QuestStatus.EXPIRED || quest.status === QuestStatus.COMPLETE}>CLAIM</AsymmetricalButton>
         <div className='flex justify-between mt-6'>
           <div>
             <Points points={100} xp={25} />

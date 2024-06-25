@@ -1,4 +1,4 @@
-// components/buttons/StandardButton/StandardButton.tsx
+'use client'
 import React from 'react';
 import BaseButton, { BaseButtonProps } from '../BaseButton';
 
