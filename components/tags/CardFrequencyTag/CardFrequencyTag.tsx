@@ -1,5 +1,5 @@
-import DailyIcon from '@/public/icons/daily.svg';
-import InfiniteIcon from '@/public/icons/infinity.svg';
+import DailyIcon from '@/components/icons/daily.svg';
+import InfiniteIcon from '@/components/icons/infinity.svg';
 import './CardFrequencyTag.styles.css';  // Adjust the path as necessary
 import { QuestFrequency } from '@prisma/client';
 

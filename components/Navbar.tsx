@@ -7,10 +7,10 @@ import { navigationLinks } from "@/lib/routing";
 import { Logo, Link } from "@/components";
 import useUser from "@/hooks/useUser";
 import StandardButton from '@/components/buttons/StandardButton/StandardButton';
-import SettingsIcon from '@/public/icons/settings.svg';
-import LogOutIcon from '@/public/icons/logout.svg';
-import MenuIcon from '@/public/icons/menu.svg';
-import CloseIcon from '@/public/icons/close.svg'; // Assuming you have a close icon
+import SettingsIcon from '@/components/icons/settings.svg';
+import LogOutIcon from '@/components/icons/logout.svg';
+import MenuIcon from '@/components/icons/menu.svg';
+import CloseIcon from '@/components/icons/close.svg'; // Assuming you have a close icon
 
 const Navbar = () => {
   const { isAuthenticated, user } = useUser();

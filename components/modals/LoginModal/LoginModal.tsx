@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import FacebookIcon from "@/public/icons/facebook.svg";
-import GoogleIcon from "@/public/icons/google.svg";
-import TwitterIcon from "@/public/icons/twitter.svg";
-import DiscordIcon from "@/public/icons/discord.svg";
-import SparkballLogo from "@/public/images/logo-color.svg";
+import Link from "next/link";
+import Image from "next/image";
+import FacebookIcon from "@/components/icons/facebook.svg";
+import GoogleIcon from "@/components/icons/google.svg";
+import TwitterIcon from "@/components/icons/twitter.svg";
+import DiscordIcon from "@/components/icons/discord.svg";
 import StandardInputField from "@/components/inputs/StandardInputField";
 import StandardButton from "@/components/buttons/StandardButton/StandardButton";
 import "./LoginModal.styles.css";
@@ -17,11 +18,15 @@ const LoginModal = () => {
   return (
     <div className={`flex items-center justify-center w-full h-full`}>
       <div className="flex flex-col items-center w-[360px] h-[574px] p-8 m-6 mx-auto my-auto space-y-6 z-10 bg-white highlight-border">
-        <SparkballLogo
-          className="h-12 w-auto"
-          alt="Sparkball logo"
-          style={{ height: "42.9px", width: "210.38px" }}
-        />
+        <Link href="/">
+          <Image
+            className="h-12 w-auto"
+            alt="Sparkball logo"
+            src="/images/logo-color.svg"
+            height={43}
+            width={210}
+          />
+        </Link>
         <p className="mb-4 text-black">
           Don't have an account?{" "}
           <a href="#" className="text-orange-500">

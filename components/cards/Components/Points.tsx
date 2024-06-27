@@ -1,5 +1,5 @@
 import React from 'react';
-import FireIcon from '@/public/icons/base_fame.svg';
+import FireIcon from '@/components/icons/base_fame.svg';
 
 export const Points = ({ points, xp, fireIcon }: { points: number, xp: number, fireIcon?: boolean }) => {
     return (

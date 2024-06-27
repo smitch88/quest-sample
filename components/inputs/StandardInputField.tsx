@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SearchIcon from '@/public/icons/search.svg';
-import EyeIcon from '@/public/icons/visibility.svg';
-import EyeOffIcon from '@/public/icons/visibility_off.svg';
+import SearchIcon from '@/components/icons/search.svg';
+import EyeIcon from '@/components/icons/visibility.svg';
+import EyeOffIcon from '@/components/icons/visibility_off.svg';
 import clsx from 'clsx';
 import './AsymetricInputField.styles.css';
 

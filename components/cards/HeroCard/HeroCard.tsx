@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseCard, { BaseCardProps } from '../BaseCard/BaseCard';
-import CompleteIcon from '@/public/icons/check_circle.svg';
-import LockIcon from '@/public/icons/lock.svg';
+import CompleteIcon from '@/components/icons/check_circle.svg';
+import LockIcon from '@/components/icons/lock.svg';
 import clsx from 'clsx';
 import StatusTag from '@/components/tags/AsymetricStatusTag/AsymetricStatusTag';
 import './HeroCard.styles.css';

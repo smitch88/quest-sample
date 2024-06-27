@@ -1,6 +1,6 @@
 // components/StatusTag.tsx
-import LockSvg from '@/public/icons/lock.svg';
-import CheckMark from '@/public/icons/check_circle.svg';
+import LockSvg from '@/components/icons/lock.svg';
+import CheckMark from '@/components/icons/check_circle.svg';
 import './AsymetricStatusTag.styles.css';  // Adjust the path as necessary
 import { QuestStatus } from '@prisma/client';
 import clsx from 'clsx';

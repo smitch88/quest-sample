@@ -1,6 +1,5 @@
 // components/Modal.tsx
 import React from 'react';
-import HighlightSVG from '@/public/images/Highlights.svg';
 import './BaseModal.styles.css';
 
 export interface ModalProps {
@@ -17,7 +16,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose, isPopup=true, 
   return (
     <div className={`fixed inset-0 flex items-center justify-center ${isPopup ? 'bg-black bg-opacity-50' : ''} z-30`}>
       <div className={`relative ${className}`}>
-        
+
         <div className="relative bg-white shadow-lg w-full h-full p-6 highlight-border z-40 flex justify-center items-center">
           {isPopup && (
             <button
