@@ -43,8 +43,8 @@ const config: Config = {
       },
       fontFamily: {
         main: ["teko", "sans-serif"],
-        header: ["helvetica neue", "sans-serif"],
-        sans: ['Nunito Sans', 'sans-serif'],
+        header: ["zuume", "sans-serif"],
+        sans: ["Nunito Sans", "sans-serif"],
       },
       backgroundImage: {
         "gradient-v-ice": "linear-gradient(to bottom, #0082D9, #39E1FF)",
@@ -54,7 +54,7 @@ const config: Config = {
         "gradient-v-deep": "linear-gradient(to bottom, #151A1E, #0082D9)",
       },
       boxShadow: {
-        'disabled': '0 4px 6px rgba(0, 0, 0, 0.1)',
+        disabled: "0 4px 6px rgba(0, 0, 0, 0.1)",
       },
     },
   },
