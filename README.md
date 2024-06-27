@@ -4,5 +4,6 @@
 
 ```bash
 pnpm install
+pnpm generate
 pnpm dev
 ```
